@@ -23,6 +23,7 @@ class Assignment1_a
                 i++;
                 System.out.println();
                 fileWriter.write("\n");
+                fileWriter.close();
             }
             i = 0;
             while(i < students.length){
