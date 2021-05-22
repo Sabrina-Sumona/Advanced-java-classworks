@@ -1,10 +1,8 @@
 import java.io.*;
 import java.util.Scanner;
 
-class FilesWriter
-{
-    public static void main(String[] args)
-    {
+class FilesWriter {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your name:");
         String name = sc.nextLine()+" ";
@@ -16,9 +14,8 @@ class FilesWriter
             fileWriter.write(name);
             fileWriter.write(dept);
             fileWriter.write(id);
-        }
-        catch(IOException ioe) {
-            ioe.printStackTrace();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
         }
     }
 }

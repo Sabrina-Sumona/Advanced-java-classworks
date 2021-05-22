@@ -1,8 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-class FilesScanner
-{
+class FilesScanner {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(new BufferedReader(new FileReader("info.txt")))) {
             int count = 0;
@@ -17,9 +16,8 @@ class FilesScanner
                 count++;
                 System.out.println(sc.next());
             }
-        }
-        catch(IOException ioe) {
-            ioe.printStackTrace();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
         }
     }
 }

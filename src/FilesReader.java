@@ -1,16 +1,12 @@
 import java.io.*;
-import java.io.FileReader;
 
-class FilesReader
-{
-    public static void main(String[] args)
-    {
+class FilesReader {
+    public static void main(String[] args) {
         FileReader infile;
         int b;
         int count = 0;
 
-        try
-        {
+        try {
             infile = new FileReader("info.txt");
             while((b = infile.read()) != -1) {
                 if (b == ' ') {
@@ -20,8 +16,7 @@ class FilesReader
                     } else {
                         System.out.print("\nStudent id: ");
                     }
-                }
-                else {
+                } else {
                     if (count == 0) {
                         System.out.print("Student name: ");
                         count++;
@@ -30,11 +25,8 @@ class FilesReader
                 }
             }
             infile.close();
-        }
-
-        catch(IOException ioe)
-        {
-            System.out.println(ioe);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
