@@ -1,11 +1,10 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static java.lang.Math.pow;
 
-public class Assignment3_Calculator extends JFrame {
+public class Calculator extends JFrame {
     private JPanel mainPanel;
 
     private JButton button01;
@@ -36,13 +35,12 @@ public class Assignment3_Calculator extends JFrame {
     private JButton power;
     private JButton root;
 
-
-    public Assignment3_Calculator(String title) {
+    public Calculator(String title) {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
         this.pack();
-        output.setBackground(Color.GRAY);
+//        output.setBackground(Color.GRAY);
             button01.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -252,7 +250,7 @@ public class Assignment3_Calculator extends JFrame {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new Assignment3_Calculator("Calculator");
+        JFrame frame = new Calculator("Calculator");
         frame.setVisible(true);
         frame.setSize(700,350);
     }
